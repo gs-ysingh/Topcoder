@@ -74,4 +74,22 @@ public class SellingFruitsTest {
 		int p = 1000000000;
 		assertEquals(1000000000, new SellingFruits().maxDays(x, f, d, p));
 	}
+
+	@Test(timeout=1000)
+	public void test8() {
+		int x = 1;
+		int f = 1;
+		int d = 2000000000;
+		int p = 1;
+		assertEquals(1000000000, new SellingFruits().maxDays(x, f, d, p));
+	}
+
+	@Test(timeout=1000)
+	public void test9() {
+		int x = 80;
+		int f = 15116246;
+		int d = 1313059405;
+		int p = 8325;
+		assertEquals(15128591, new SellingFruits().maxDays(x, f, d, p));
+	}
 }
