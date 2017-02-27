@@ -60,9 +60,28 @@ public class GridSort {
 			if(res == "Impossible") {
 				break;
 			}
-			
+
 		}
 
 		return res;
+	}
+
+	//Official solution from forums
+	public String girdSort(int n, int m, int[] grid) {
+		for (int i = 0; i < n; i++) {
+			HashSet<Integer> hs = new HashSet();
+			for (int j = 0; j < m; j++) {
+				hs.add((grid[i*m+j]-1) / m);
+			}
+			if (hs.size() != 1) return "Impossible";
+		}
+		for (int j = 0; j < m; j++) {
+			HashSet<Integer> hs = new HashSet();
+			for (int i = 0; i < n; i++) {
+				hs.add((grid[i*m+j]-1) % m);
+			}
+			if (hs.size() != 1) return "Impossible";
+		}
+		return "Possible";
 	}
 }
