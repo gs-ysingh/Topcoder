@@ -8,7 +8,8 @@ public class StringTransform {
 		Set<Character> characters = new HashSet<>();
 
 		for (int i = 0; i < s.length(); i++) {
-			if(s.charAt(i) != t.charAt(i) && !characters.contains(t.charAt(i))) {
+			if(s.charAt(i) != t.charAt(i)
+					&& !characters.contains(t.charAt(i))) {
 				return "Impossible";
 			}
 			characters.add(s.charAt(i));
